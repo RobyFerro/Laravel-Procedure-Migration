@@ -1,0 +1,35 @@
+{
+	"name": "ikdev/procedure_migration",
+	"description": "A simple procedure migration manager for Laravel",
+	"license": "MIT",
+	"type": "library",
+	"version": "dev-master",
+	"keywords": [
+		"laravel",
+		"administration-panel",
+		"manager",
+		"filemanager"
+	],
+	"authors": [
+		{
+			"name": "Roberto Ferro",
+			"email": "roberto.ferro@ikdev.eu"
+		}
+	],
+	"require": {
+		"php": ">=7.1"
+	},
+	"extra": {
+		"laravel": {
+			"providers": [
+                "ikdev\\procedure_migration\\ProcedureMigrationsServiceProvider"
+			]
+		}
+	},
+	"autoload": {
+		"psr-4": {
+			"ikdev\\procedure_migration\\": "src/"
+		}
+	},
+	"minimum-stability": "dev"
+}
