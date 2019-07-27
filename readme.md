@@ -1,11 +1,16 @@
 # Laravel procedure migrations
 Laravel procedure migrations it's a simple tool to manage your stored procedure in your Laravel projects.
-It's behaviour is similar to the official database migrations. You've just to put your .sql procedure file in _database/procedures_ folder and run 
+It's behaviour is similar to the official database migrations. 
+
+You've just to put your .sql procedure file in _database/procedures_ folder and run 
 `php artisan procedure:migrate`.
 
 ## Installation
 You can install "Laravel procedure migrations" with composer:
 `composer require ikdev\procedure_migration`
+
+To create the new '_procedure_' folder execute this command:
+`php artisan vendor:publish --tag=procedure_migration`
 
 ### Laravel < 5.6
 If your Laravel version is older than 5.6 you'll need to manually adding the service provider.
