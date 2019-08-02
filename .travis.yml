@@ -9,4 +9,5 @@ before_install:
 - composer config repositories.ikdev github https://github.com/RobyFerro/Laravel-Procedure-Migration.git
 - composer require ikdev/procedure_migration
 - php artisan vendor:publish --tag=procedure_migration
+- php artisan migrate
 script: php vendor/phpunit/phpunit/phpunit --configuration vendor/ikdev/procedure_migration/travis.phpunit.xml
