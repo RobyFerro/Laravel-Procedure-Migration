@@ -1,0 +1,5 @@
+#Ignore everithing in this directory
+*
+#Except for this file
+!.gitignore
+!first_procedure.sql
