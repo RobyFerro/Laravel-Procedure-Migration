@@ -26,7 +26,7 @@ class ProcedureMigrationTest extends TestCase
 			
 			if (preg_match('/test_procedure/', $procedure)){
 				$result = true;
-				unlink_if_exists(database_path("procedures/{$procedure}"));
+				unlink(database_path("procedures/{$procedure}"));
 				break;
 			}
 	    }
