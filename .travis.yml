@@ -6,6 +6,7 @@ before_install:
 - psql -c 'create database homestead' -U postgres
 - composer self-update
 - composer create-project laravel/laravel
+- cp .env.travis ./laravel/.env
 - cd ./laravel
 - composer config repositories.ikdev github https://github.com/RobyFerro/Laravel-Procedure-Migration.git
 - composer require ikdev/procedure_migration
