@@ -2,7 +2,7 @@
 
 namespace ikdev\procedure_migration\tests\Features;
 
-use Tests\TestCase;
+use PHPUnit\Framework\TestCase;
 
 class ProcedureMigrationTest extends TestCase
 {
