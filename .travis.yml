@@ -11,5 +11,5 @@ before_install:
 - php artisan vendor:publish --tag=procedure_migration
 - php artisan key:generate
 script:
-- php artisan migrate --no-interactions -vvv
+- php artisan migrate
 - php vendor/phpunit/phpunit/phpunit --configuration vendor/ikdev/procedure_migration/travis.phpunit.xml
