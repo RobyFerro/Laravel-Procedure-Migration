@@ -3,7 +3,7 @@ php: "7.2"
 services:
 - postgresql
 before_install:
-- psql -c 'create database homestead' -U postgres
+- psql -c 'create database homestead;' -U postgres
 - composer self-update
 - composer create-project laravel/laravel
 - cp .env.travis ./laravel/.env
