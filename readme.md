@@ -7,6 +7,8 @@ It's behaviour is similar to the official database migrations.
 You've just to put your .sql procedure file in _database/procedures_ folder and run 
 `php artisan procedure:migrate`.
 
+To create a new procedure just type in you're terminal `php artisan make:procedure <YOUR NEW PROCEDURE NAME>`
+
 ## Installation
 You can install "Laravel procedure migrations" with composer:
 `composer require ikdev\procedure_migration`

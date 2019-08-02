@@ -30,7 +30,7 @@ class ProcedureMigrate extends Command
             
             if ($file->getExtension() === 'sql') {
                 $checksum = md5_file(database_path("procedures/$procedure"));
-                $existing_procedure = Procedure::where('checksum', $checksum)->exists();
+                $existing_procedure = Procedure::where('filename', $file->getFilename())->exists();
                 
                 if(!$existing_procedure){
                     $this->line("Found '{$file->getFilename()}' procedure! Trying to insert new procedure in database");

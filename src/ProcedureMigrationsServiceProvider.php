@@ -2,6 +2,7 @@
 
 namespace ikdev\procedure_migration;
 
+use ikdev\procedure_migration\app\Console\Command\CreateNewProcedure;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use ikdev\procedure_migration\app\Console\Command\ProcedureMigrate;
 
@@ -17,7 +18,8 @@ class ProcedureMigrationsServiceProvider extends ServiceProvider
 		
 		if ($this->app->runningInConsole()) {
 			$this->commands([
-				ProcedureMigrate::class
+				ProcedureMigrate::class,
+				CreateNewProcedure::class
 			]);
 		}
 	}
