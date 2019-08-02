@@ -1,4 +1,5 @@
 language: php
+php: "7.2"
 before_install:
 - composer self-update
 - composer create-project laravel/laravel
@@ -6,4 +7,4 @@ before_install:
 - composer config repositories.ikdev github https://github.com/RobyFerro/Laravel-Procedure-Migration.git
 - composer require ikdev/procedure_migration
 - php artisan vendor:publish --tag=procedure_migration
-script: phpunit
+script: phpunit --configuration travis.phpunit.xml
