@@ -1,9 +1,9 @@
 language: php
 before_install:
-	- composer self-update
-	- composer cerate-project laravel/laravel
-	- cd ./laravel
-	- composer config repositories.ikdev github https://github.com/RobyFerro/Laravel-Procedure-Migration.git
-	- composer require ikdev/procedure_migration
-	- php artisan vendor:publish --tag=procedure_migration
+- composer self-update
+- composer cerate-project laravel/laravel
+- cd ./laravel
+- composer config repositories.ikdev github https://github.com/RobyFerro/Laravel-Procedure-Migration.git
+- composer require ikdev/procedure_migration
+- php artisan vendor:publish --tag=procedure_migration
 script: phpunit
