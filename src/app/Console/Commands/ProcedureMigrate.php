@@ -8,6 +8,7 @@ use Illuminate\Console\Command;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
+use SplFileInfo;
 
 class ProcedureMigrate extends Command
 {
@@ -26,16 +27,16 @@ class ProcedureMigrate extends Command
                 continue;
             }
             
-            $file = new \SplFileInfo(database_path("procedures/{$procedure}"));
+            $file = new SplFileInfo(database_path("procedures/{$procedure}"));
             
             if ($file->getExtension() === 'sql') {
                 $checksum = md5_file(database_path("procedures/$procedure"));
                 $existing_procedure = Procedure::where('filename', $file->getFilename())->exists();
                 
-                if(!$existing_procedure){
+                if (!$existing_procedure) {
                     $this->line("Found '{$file->getFilename()}' procedure! Trying to insert new procedure in database");
                     
-                    try{
+                    try {
                         DB::unprepared(File::get(database_path("procedures/$procedure")));
                         Procedure::insert([
                             "filename" => $file->getFilename(),
@@ -43,7 +44,7 @@ class ProcedureMigrate extends Command
                             "created_at" => Carbon::now()
                         ]);
                         $this->line("Procedure {$file->getFilename()} correctly insert");
-                    }catch (QueryException $e){
+                    } catch (QueryException $e) {
                         $this->error($e->getMessage());
                         throw $e;
                     }
