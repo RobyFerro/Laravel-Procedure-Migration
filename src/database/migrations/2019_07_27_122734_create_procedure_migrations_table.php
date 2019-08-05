@@ -15,8 +15,8 @@ class CreateProcedureMigrationsTable extends Migration
     {
         Schema::create('procedure_migrations', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('filename',255);
-            $table->string('checksum',32);
+            $table->string('filename', 255);
+            $table->string('checksum', 32);
             $table->timestamps();
         });
     }

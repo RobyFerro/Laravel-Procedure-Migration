@@ -9,5 +9,4 @@ class Procedure extends Model
     protected $table = 'procedure_migrations';
     protected $primaryKey = 'id';
     protected $dates = ['created_at', 'updated_at'];
-    
 }
