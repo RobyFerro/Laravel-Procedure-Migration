@@ -16,9 +16,6 @@ To create a new procedure just type in you're terminal `php artisan make:procedu
 You can install "Laravel procedure migrations" with composer:
 `composer require ikdev\procedure_migration`
 
-To create the new '_procedure_' folder execute this command:
-`php artisan vendor:publish --tag=procedure_migration`
-
 ### Laravel < 5.6
 If your Laravel version is older than 5.6 you'll need to manually adding the service provider.
 To do this you've to insert this code in your _config/app.php_ file:
