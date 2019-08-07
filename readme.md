@@ -2,6 +2,7 @@
 [![Build Status](https://travis-ci.org/RobyFerro/Laravel-Procedure-Migration.svg?branch=master)](https://travis-ci.org/RobyFerro/Laravel-Procedure-Migration)
 [![StyleCI](https://github.styleci.io/repos/199186343/shield?branch=master)](https://github.styleci.io/repos/199186343)
 ![Packagist](https://img.shields.io/packagist/dm/ikdev/procedure_migration)
+![GitHub tag (latest SemVer pre-release)](https://img.shields.io/github/tag-pre/robyferro/laravel-procedure-migration)
 
 Laravel procedure migrations it's a simple tool to manage your stored procedure in your Laravel projects.
 It's behaviour is similar to the official database migrations. 
